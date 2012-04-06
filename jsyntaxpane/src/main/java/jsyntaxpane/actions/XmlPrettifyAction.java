@@ -60,6 +60,7 @@ public class XmlPrettifyAction extends DefaultSyntaxAction {
             InputSource src = new InputSource(reader);
             Document doc = getDocBuilder().parse(src);
             //Setup indenting to "pretty print"
+            setIndent("yes");
             getTransformer().transform(new DOMSource(doc), new StreamResult(out));
             target.setText(out.toString());
         } catch (SAXParseException ex) {
