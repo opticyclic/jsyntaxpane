@@ -1,0 +1,5 @@
+#Ignore IDEA directory and files as it should create itself from the pom
+.idea/
+*.iml
+atlassian-ide-plugin.xml
+
